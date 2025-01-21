@@ -1,11 +1,11 @@
 import { apiConfig } from "./api-config.js";
 
-export async function scheduleNew({ id, name, whe }) {
+export async function scheduleNew({ id, name, when }) {
   try {
     await fetch(`${apiConfig.baseURL}/schedules`, {
       method: "POST",
       headers: {
-        "Contet-Type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ id, name, when }),
     });
